@@ -1,0 +1,150 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f8f9fa;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+.app-container {
+    max-width: 900px;
+    margin: auto;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.app-header h1 {
+    margin-top: 0;
+    color: #005b96;
+}
+
+.app-header p {
+    font-size: 1.1em;
+}
+
+.wizard-steps {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.step {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+    background: #e9ecef;
+    border-radius: 5px;
+    cursor: default;
+    user-select: none;
+    transition: background 0.3s ease;
+}
+
+.step.active {
+    background: #005b96;
+    color: white;
+    font-weight: bold;
+}
+
+.step-content {
+    display: none;
+}
+
+.step-content.active {
+    display: block;
+}
+
+select, input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin: 10px 0 20px 0;
+    box-sizing: border-box;
+}
+
+#insurer-info {
+    background: #e9f7ff;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    color: #004d66;
+}
+
+#documents-list {
+    background: #f0f8ff;
+    padding: 15px;
+    border-radius: 5px;
+    max-height: 300px;
+    overflow-y: auto;
+    font-size: 0.9em;
+}
+
+.document-item {
+    margin-bottom: 12px;
+}
+
+.accepted-documents {
+    margin-left: 22px;
+    font-style: italic;
+    font-size: 0.8em;
+    color: #666;
+    cursor: pointer;
+}
+
+.accepted-documents:hover {
+    text-decoration: underline;
+}
+
+#upload-form > div {
+    margin-bottom: 15px;
+}
+
+#upload-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+button {
+    background-color: #005b96;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    margin: 10px 5px 0 0;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+button:hover:not(:disabled) {
+    background-color: #00447c;
+}
+
+button:disabled {
+    background-color: #b0dadf;
+    cursor: default;
+}
+
+#assessment-results {
+    background: #e6f0ff;
+    padding: 20px;
+    border-radius: 8px;
+    min-height: 150px;
+    font-size: 0.95em;
+}
+
+.progress-bar {
+    height: 20px;
+    background-color: #cce5ff;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    background-color: #005b96;
+    border-radius: 10px;
+    width: 0%;
+    transition: width 0.5s ease;
+}
