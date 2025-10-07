@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Insurance Claim Validator - Check Reimbursement</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <h1>Insurance Claim Validator</h1>
+            <p>Check your reimbursement prospects before submitting claims</p>
+        </header>
+
+        <div id="step-1" class="step active">
+            <h2>Step 1: Select Your Insurer</h2>
+            <input type="text" id="insurerSearch" placeholder="Search insurer..." />
+            <select id="insurerSelect">
+                <option value="">-- Select Insurer --</option>
+            </select>
+            <button id="toStep2" disabled>Next</button>
+        </div>
+
+        <div id="step-2" class="step">
+            <h2>Step 2: Choose Claim Category and Type</h2>
+            <div id="claimCategories"></div>
+            <button id="backToStep1">Back</button>
+            <button id="toStep3" disabled>Next</button>
+        </div>
+
+        <div id="step-3" class="step">
+            <h2>Step 3: Document Requirements</h2>
+            <div id="documentsList"></div>
+            <label>
+                <input type="radio" name="claimOption" value="Full Claim" checked />
+                Full Claim
+            </label>
+            <label>
+                <input type="radio" name="claimOption" value="Partial Claim" />
+                Partial Claim
+            </label>
+            <button id="backToStep2">Back</button>
+            <button id="toStep4">Next</button>
+        </div>
+
+        <div id="step-4" class="step">
+            <h2>Step 4: Upload Documents</h2>
+            <div id="uploadSections"></div>
+            <button id="backToStep3">Back</button>
+            <button id="toStep5">Validate Documents</button>
+        </div>
+
+        <div id="step-5" class="step">
+            <h2>Step 5: Validation Results and Recommendations</h2>
+            <div id="validationResults"></div>
+            <button id="restart">Restart</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
